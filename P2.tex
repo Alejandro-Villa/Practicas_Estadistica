@@ -1,0 +1,42 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Alejandro Villanueva Prados}
+\title{Relación 2 de EDIP.}
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+        \item De las estadísticas de ``Tiempos de vuelo y consumos de combustible'' de una compañía aérea, se han obtenido datos relativos a 24 trayectos distintos realizados por eel avión DC-9. A partir de estos datos se han obtenido las siguientes medidas:
+            \begin{center}
+                \[
+                \sum y_i = 219.719 \quad  \sum y_i^2 = 2396.504 \quad \sum x_i y_i = 349.486
+                \]
+                \[
+                \sum x_i = 31.470 \quad \sum x_i^2 = 51.075 \quad \sum x_i^2 y_i = 633.993
+                \]
+                \[
+                \sum x_i^4 = 182.977 \quad \sum x_i^3 = 93.6
+                \]
+            \end{center}
+            La variable \(Y\) expresa el consumo total de combustible, en miles de libras, correspondiente a un vuelo de duración \(X\) (el tiempo se expresa en horas, y se utilizan como unidades de orden inferior fracciones decimales de la hora).
+
+            \begin{enumerate}[a)]
+                \item Ajustar un modelo del tipo \(Y=aX+b\). ¿Qué consumo total se estimaría para un programa de vuelos compuesto de 100 vuelos de media hora, 200 de una hora y 100 de dos horas? ¿Es fiable esta estimación?
+
+
+                    \emph{Solución}: Comenzamos analizando nuestra población y los datos que tenemos: observamos que la población es de tamaño \(n=24\), como no tenemos las frecuencias absolutas ni relativas, vamos a suponer que las frecuencias absolutas se han tenido en cuenta repitiendo \(n_i\) veces el sumando \(x_i\), entendiendo entonces que cada sumatorio tiene como recorrido desde \(i=1\) hasta \(n=24\).
+
+
+                    Una vez tomadas estas consideraciones, nos centramos en la pregunta: encontrar un ajuste lineal mediante un polinomio de grado 1. La expresión de la función será: \[y - \overline{y}=\frac{\sigma_{xy}}{\sigma_x^2}\left(x-\overline{x}\right)\]
+            \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
