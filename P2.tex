@@ -31,10 +31,24 @@
                 \item Ajustar un modelo del tipo \(Y=aX+b\). ¿Qué consumo total se estimaría para un programa de vuelos compuesto de 100 vuelos de media hora, 200 de una hora y 100 de dos horas? ¿Es fiable esta estimación?
 
 
-                    \emph{Solución}: Comenzamos analizando nuestra población y los datos que tenemos: observamos que la población es de tamaño \(n=24\), como no tenemos las frecuencias absolutas ni relativas, vamos a suponer que las frecuencias absolutas se han tenido en cuenta repitiendo \(n_i\) veces el sumando \(x_i\), entendiendo entonces que cada sumatorio tiene como recorrido desde \(i=1\) hasta \(n=24\).
+                    \emph{Solución}: Comenzamos analizando nuestra población y los datos que tenemos: observamos que la población es de tamaño \(n=24\), además nos indican que los 24 vuelos son distintos así que \(n_i = 1; \quad \forall i \in \{1 \dots 24\}\) 
 
 
-                    Una vez tomadas estas consideraciones, nos centramos en la pregunta: encontrar un ajuste lineal mediante un polinomio de grado 1. La expresión de la función será: \[y - \overline{y}=\frac{\sigma_{xy}}{\sigma_x^2}\left(x-\overline{x}\right)\]
+                    Una vez tomadas estas consideraciones, nos centramos en la pregunta: encontrar un ajuste lineal mediante un polinomio de grado 1. La expresión de la función será: \[y - \overline{y}=\frac{\sigma_{xy}}{\sigma_x^2}\left(x-\overline{x}\right),\] así que pasamos a calcular los datos necearios:\[\overline{x}=\frac{1}{n}\sum x_i = \frac{31.470}{24}\approx1.311\text{ Horas de vuelo},\]\[\overline{y}=\frac{1}{n}\sum y_i=\frac{219.719}{24}\approx 9.155\text{ Miles de libras de combustible},\]\[\sigma_{xy}=\frac{1}{n}\sum(x_i-\overline{x})(y_i-\overline{y})=m_{11}-m_{10}m_{01}=\frac{1}{n}\sum x_iy_i-\frac{1}{n^2}\sum x_i\sum y_i\approx 2.557\]\[\sigma_x^2=\frac{1}{n}\sum(x_i-\overline{x})^2=\frac{1}{n}\sum x_i^2 - \overline{x},\approx 0.410\] finalmente, la recta de regresión queda: \[y=6.237x-0.979.\]
+
+                    Pasamos ahora a la segunda cuestión del apartado, para ello aplicamos la función obtenida:
+
+
+                    \[ 6.237\cdot 0.5 -0.979 = 2.140 \text{ (Consumo estimado para un vuelo de media hora)}\]\[6.237 \cdot 1 - 0.979 = 5.258 \text{ (Consumo estimado para un vuelo de una hora)}\]\[6.237 \cdot 2 - 0.979 = 11.495 \text{ (Consumo estimado para un vuelo de dos horas)}\] Ahora escalamos estos resultados multiplicando por el númmero de vuelos y sumamos todo, obteniendo un consumo total de \(2415.1\) miles de libras de combustible.
+                    
+                    Para cuantificar la fiabilidad de la predicción, vamos a emplear el coeficiente de correlación lineal, dado por \[r=\pm\sqrt{r^2}=\frac{\sigma_{xy}}{\sigma_x\sigma_y},\] calculamos \(\sigma_x\) y \(\sigma_y\): \[\sigma_x=\sqrt{\sigma_x^2}=\sqrt{0.401}\approx0.640\]\[\sigma_y=\sqrt{\frac{1}{n}\left(\sum y_i^2-\sum y_i\right)}\approx 9.52,\] con estos datos, el coeficiente de correlación lineal queda \(0.42\), lo que nos indica un ajuste pobre y una baja fiabiidad.
+                
+                \item  Ajustar un modelo del tipo \(Y=a+bX+cX^2\). ¿Qué consumo total se estimaría para el mismo programa de vuelos del apartado a)?
+
+                    \emph{Solución}: Los coeficientes de nuestra función de ajuste vienen dados por las soluciones del siguiente sistema:
+%                    \begin{eqarray}
+%                        m_{01} &= a_0 + a_1 m_{10} + a_2 m_{20}
+%                    \end{eqarray}
             \end{enumerate}
 
 \end{enumerate}
