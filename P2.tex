@@ -13,6 +13,33 @@
 \maketitle
 
 \begin{enumerate}
+		\item En una encuesta de familias sobre el número de individuos que la componen ($X$) y el número de personas activas en ellas ($Y$) se han obtenido los siguientes resultados:
+
+\begin{center}
+\begin{tabular}{c|cccc}
+$X \backslash Y$ & 1 & 2 & 3 & 4 \\\hline
+1 & 7 & 0 & 0 & 0 \\
+2 & 10 & 2 & 0 & 0 \\
+3 & 11 & 5 & 1 & 0 \\
+4 & 10 & 6 & 6 & 0 \\
+5 & 8 & 6 & 4 & 2 \\
+6 & 1 & 2 & 3 & 1 \\
+7 & 1 & 0 & 0 & 1 \\
+8 & 0 & 0 & 1 & 1 \\
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item[a)]Calcular la recta de regresión de $Y$ sobe $X$.
+
+$y=0,3147x + 0,5322$.
+
+\item[b)]¿Es adecuado suponer una relación lineal para explicar el comportamiento de $Y$ a partir de $X$?
+
+Según el coeficiente de correlación lineal $$r = \frac{\sigma_{xy}}{\sigma_x\sigma_y} = 0,535$$ el ajuste no es el idóneo, pero los hay peores.
+
+\end{itemize}
+
         \item De las estadísticas de ``Tiempos de vuelo y consumos de combustible'' de una compañía aérea, se han obtenido datos relativos a 24 trayectos distintos realizados por eel avión DC-9. A partir de estos datos se han obtenido las siguientes medidas:
             \begin{center}
                 \[
@@ -34,22 +61,41 @@
                     \emph{Solución}: Comenzamos analizando nuestra población y los datos que tenemos: observamos que la población es de tamaño \(n=24\), además nos indican que los 24 vuelos son distintos así que \(n_i = 1; \quad \forall i \in \{1 \dots 24\}\) 
 
 
-                    Una vez tomadas estas consideraciones, nos centramos en la pregunta: encontrar un ajuste lineal mediante un polinomio de grado 1. La expresión de la función será: \[y - \overline{y}=\frac{\sigma_{xy}}{\sigma_x^2}\left(x-\overline{x}\right),\] así que pasamos a calcular los datos necearios:\[\overline{x}=\frac{1}{n}\sum x_i = \frac{31.470}{24}\approx1.311\text{ Horas de vuelo},\]\[\overline{y}=\frac{1}{n}\sum y_i=\frac{219.719}{24}\approx 9.155\text{ Miles de libras de combustible},\]\[\sigma_{xy}=\frac{1}{n}\sum(x_i-\overline{x})(y_i-\overline{y})=m_{11}-m_{10}m_{01}=\frac{1}{n}\sum x_iy_i-\frac{1}{n^2}\sum x_i\sum y_i\approx 2.557\]\[\sigma_x^2=\frac{1}{n}\sum(x_i-\overline{x})^2=\frac{1}{n}\sum x_i^2 - \overline{x},\approx 0.410\] finalmente, la recta de regresión queda: \[y=6.237x-0.979.\]
+                    Una vez tomadas estas consideraciones, nos centramos en la pregunta: encontrar un ajuste lineal mediante un polinomio de grado 1. La expresión de la función será: \[y - \overline{y}=\frac{\sigma_{xy}}{\sigma_x^2}\left(x-\overline{x}\right),\] así que pasamos a calcular los datos necearios:\[\overline{x}=\frac{1}{n}\sum x_i = \frac{31.470}{24}\approx1.311\text{ Horas de vuelo},\]\[\overline{y}=\frac{1}{n}\sum y_i=\frac{219.719}{24}\approx 9.155\text{ Miles de libras de combustible},\]\[\sigma_{xy}=\frac{1}{n}\sum(x_i-\overline{x})(y_i-\overline{y})=m_{11}-m_{10}m_{01}=\frac{1}{n}\sum x_iy_i-\frac{1}{n^2}\sum x_i\sum y_i\approx 2.557\]\[\sigma_x^2=\frac{1}{n}\sum(x_i-\overline{x})^2=\frac{1}{n}\sum x_i^2 - \overline{x}^2,\approx 0.40854\] finalmente, la recta de regresión queda: \[y=6.26x+0.946.\]
 
                     Pasamos ahora a la segunda cuestión del apartado, para ello aplicamos la función obtenida:
 
 
-                    \[ 6.237\cdot 0.5 -0.979 = 2.140 \text{ (Consumo estimado para un vuelo de media hora)}\]\[6.237 \cdot 1 - 0.979 = 5.258 \text{ (Consumo estimado para un vuelo de una hora)}\]\[6.237 \cdot 2 - 0.979 = 11.495 \text{ (Consumo estimado para un vuelo de dos horas)}\] Ahora escalamos estos resultados multiplicando por el númmero de vuelos y sumamos todo, obteniendo un consumo total de \(2415.1\) miles de libras de combustible.
+                    \[ 6.26\cdot 0.5+0.946 = 4.076 \text{ (Consumo estimado para un vuelo de media hora)}\]\[6.26 \cdot 1 + 0.946 = 7.206 \text{ (Consumo estimado para un vuelo de una hora)}\]\[6.26 \cdot 2 + 0.946 = 13.466 \text{ (Consumo estimado para un vuelo de dos horas)}\] Ahora escalamos estos resultados multiplicando por el númmero de vuelos y sumamos todo, obteniendo un consumo total de \(3195.4\) miles de libras de combustible.
                     
-                    Para cuantificar la fiabilidad de la predicción, vamos a emplear el coeficiente de correlación lineal, dado por \[r=\pm\sqrt{r^2}=\frac{\sigma_{xy}}{\sigma_x\sigma_y},\] calculamos \(\sigma_x\) y \(\sigma_y\): \[\sigma_x=\sqrt{\sigma_x^2}=\sqrt{0.401}\approx0.640\]\[\sigma_y=\sqrt{\frac{1}{n}\left(\sum y_i^2-\sum y_i\right)}\approx 9.52,\] con estos datos, el coeficiente de correlación lineal queda \(0.42\), lo que nos indica un ajuste pobre y una baja fiabiidad.
+                    Para cuantificar la fiabilidad de la predicción, vamos a emplear el coeficiente de correlación lineal, dado por \[r=\pm\sqrt{r^2}=\frac{\sigma_{xy}}{\sigma_x\sigma_y},\] calculamos \(\sigma_x\) y \(\sigma_y\): \[\sigma_x=\sqrt{\sigma_x^2}=\sqrt{0.401}\approx0.640\]\[\sigma_y=\sqrt{\frac{1}{n}\left(\sum y_i^2-\frac{1}{n}\sum y_i\right)}\approx 4.005,\] con estos datos, el coeficiente de correlación lineal queda \(0.99758\), lo que nos indica un ajuste casi perfecto y una muy alta fiabiidad.
                 
                 \item  Ajustar un modelo del tipo \(Y=a+bX+cX^2\). ¿Qué consumo total se estimaría para el mismo programa de vuelos del apartado a)?
 
                     \emph{Solución}: Los coeficientes de nuestra función de ajuste vienen dados por las soluciones del siguiente sistema:
-%                    \begin{eqarray}
-%                        m_{01} &= a_0 + a_1 m_{10} + a_2 m_{20}
-%                    \end{eqarray}
-            \end{enumerate}
+                    \begin{equation*}
+                    \left\{ \begin{array}{rl}
+                        m_{01} &= a_0 + a_1 m_{10} + a_2 m_{20}, \\
+                        m_{11} &= a_0 m_{10} + a_1 m_{20} + a_2 m_{30}, \\
+                        m_{21} &= a_0 m_{20} + a_1 m_{30} + a_2 m_{40}.                    
+                    \end{array}\right.
+                    \end{equation*}
+Para ello calculamos los distintos momentos valiéndonos de los datos iniciales y resolvemos el sistema, obtenemos:
+\[
+a_0 = 0.800 \quad a_1 = 6.558 \quad a_2 = -0.112.
+\]
+
+Con estos resultados nuestra función de ajuste nos queda: \(Y = -0.112X^2 + 6.558X + 0.8\). Volviendo a calcular las predicciones con esta función nos queda un consumo estimado de \(3198.275\) miles de libras de combustible. 
+\item ¿Cuál de los dos modelos se ajusta mejor? Razonar la respuesta.
+
+\emph{Solución}: Para comparar los dos modelos vamos a usar el coeficiente de correlación, definido como sigue:
+\[
+\eta^2\_{Y/X}=\frac{\sigma_{ey}^2}{\sigma_y^2},
+\]
+donde \(\sigma_{ey}^2 = \frac{1}{n}\sum \left( \hat{y}_j-\overline{y}\right)^2=\)
+
+\textbf{NOTA: no está terminado el apartado c), no sé cómo hacerlo :'(}
+\end{enumerate}
 
 \end{enumerate}
 
