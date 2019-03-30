@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
+\usepackage{textcompw}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{enumerate}
@@ -39,6 +40,23 @@ $y=0,3147x + 0,5322$.
 Según el coeficiente de correlación lineal $$r = \frac{\sigma_{xy}}{\sigma_x\sigma_y} = 0,535$$ el ajuste no es el idóneo, pero los hay peores.
 
 \end{itemize}
+		\item Se realiza un estudio sobre la tensión de vapor de agua ($Y$, en ml. de Hg.) a distintas temperaturas($X$, en \textcelsius{}). Efectuadas 21 medidas, los resultados son:
+
+\begin{center}
+\begin{tabular}{c|ccc}
+$X \backslash Y$ & (0.5, 1.5] & (1.5,2.5] & (2.5,5.5]\\\hline
+(1, 15] & 1 & 2 & 0 \\
+(15, 25] & 1 & 4 & 2 \\
+(25, 30] & 0 & 3 & 5 \\
+\end{tabular}
+\end{center}
+
+Explicar el comportamiento de la tensión de vapor en términos de la temperatura mediante una función lineal. ¿Es adecuado asumir este tipo de relación?
+
+La recta de regresión es $$y = 0,0935x + 0,608.$$
+
+En principio sí, porque se supone que a mayor temperatura habrá mayor evaporación.
+Según el coeficiente de correlación lineal $$r = \frac{\sigma_{xy}}{\sigma_x\sigma_y} = 0,6565$$ el ajuste es más o menos adecuado, pero los hay mejores.
 
         \item De las estadísticas de ``Tiempos de vuelo y consumos de combustible'' de una compañía aérea, se han obtenido datos relativos a 24 trayectos distintos realizados por eel avión DC-9. A partir de estos datos se han obtenido las siguientes medidas:
             \begin{center}
