@@ -14,8 +14,219 @@
 \maketitle
 
 \begin{enumerate}
-\item
-\item
+\item Se han lanzado 2 dados varias veces, obteniendo los resultados que se presentan en la siguiente tabla, donde X designa el resultado del primer dado e Y, el resultado del segundo:
+
+\vspace{0.5cm}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+X & 1 & 2 & 2 & 3 & 5 & 4 & 1 & 3 & 3 & 4 & 1 & 2 & 5 & 4 & 3 & 4 & 4 & 5 & 3 & 1 & 6 & 5 & 4 & 6 \\ 
+\hline 
+Y & 2 & 3 & 1 & 4 & 3 & 2 & 6 & 4 & 1 & 6 & 6 & 5 & 1 & 2 & 5 & 1 & 1 & 2 & 6 & 6 & 2 & 1 & 2 & 5 \\ 
+\hline 
+\end{tabular} 
+
+\vspace{0.5cm}
+\hspace{0.25cm} a) Construir la tabla de frecuencias.
+
+\vspace{0.5cm}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+X  \textbackslash  Y & 1 & 2 & 3 & 4 & 5 & 6 & $n_{i\cdot}$ & $x_in_{i\cdot}$ & $(x_i- \bar{x})^2n_{i\cdot}$ \\ 
+\hline 
+1 & 0 & 1 & 0 & 0 & 0 & 3 & 4 & 4 & 361/16 \\ 
+\hline 
+2 & 1 & 0 & 1 & 0 & 1 & 0 & 3 & 6 & 363/64 \\ 
+\hline 
+3 & 1 & 0 & 0 & 2 & 1 & 1 & 5 & 15 & 45/64 \\ 
+\hline 
+4 & 2 & 3 & 0 & 0 & 0 & 1 & 6 & 24 & 75/32 \\ 
+\hline 
+5 & 2 & 1 & 1 & 0 & 0 & 0 & 4 & 20 & 169/16 \\ 
+\hline 
+6 & 0 & 1 & 0 & 0 & 1 & 0 & 2 & 12 & 441/32 \\ 
+\hline 
+$n_{\cdot j}$ & 6 & 6 & 2 & 2 & 3 & 5 & 24 & 81 & 6043/32 \\ 
+\hline 
+$y_jn_{\cdot j}$ & 7 & 10 & 6 & 8 & 15 & 30 & 76 &  &  \\ 
+\hline 
+$(y_j-\bar{y})^2n_{\cdot j}$ & 2809/36 & 841/96 & 25/288 & 361/288 & 1849/192 & 22445/576 & 87.6929  &   &   \\ 
+\hline 
+\end{tabular} 
+
+\vspace{0.5cm}
+\hspace{0.25cm} b) Calcular las puntuaciones medias obtenidas de cada dado y ver cuáles son más homogéneas.
+
+\vspace{0.5cm}
+\begin{equation*}
+\bar{y} = \dfrac{\displaystyle\sum_{j = 1}^6(y_{i}*n_{\cdot j})}{N} = \frac{77}{24} \simeq 3.208333 \simeq 3 \textrm{ puntos}
+\end{equation*}
+
+\begin{equation*}
+\bar{x} = \dfrac{\displaystyle\sum_{i = 1}^6(x_{i}*n_{\cdot i})}{N} = \frac{81}{24} \simeq 3.375 \simeq 3 \textrm{ puntos} 
+\end{equation*}
+
+\begin{equation*}
+\sigma_y = \sqrt{\displaystyle\sum_{j = 1}^6 \dfrac{(y_j - \bar{y})^2 n_j}{N}} = \sqrt{\dfrac{87.6929}{24}} = 1.91151
+\end{equation*}
+
+\begin{equation*}
+\sigma_x = \sqrt{\displaystyle\sum_{i = 1}^6 \dfrac{(x_i - \bar{x})^2 n_i}{N}} = \sqrt{\dfrac{6043}{32*24}} = 2.80508
+\end{equation*}
+
+Las puntuaciones obtenidas por el dado Y son más homogéneas.
+
+\vspace{0.5cm}
+\hspace{0.25cm} c) ¿Qué resultado del 2º dado es más frecuente cuando en el 1º se obtiene un 3?
+
+El 4
+
+\vspace{0.5cm}
+\hspace{0.25cm} d) Calcular la puntuación máxima del 50\% de las puntuaciones más bajas obtenidas con el primer dado si con el segundo se ha obtenido un 2 o un 5?
+
+\vspace{0.25cm}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+  & (4,2) & (5,2) = (2,5) & (6,2) = (3,5) & (6,5) \\ 
+\hline 
+$z_i$ & 6 & 7 & 8 & 11 \\ 
+\hline 
+$n_i$ & 3 & 2 & 2 & 1 \\ 
+\hline 
+$N_i$ & 3 & 5 & 7 & 8 \\ 
+\hline 
+\end{tabular}
+
+\vspace{0.25cm}
+Mediana: $\dfrac{N}{2} = 4 \Rightarrow $ Me = 7
+
+\newpage
+\item Medidos los pesos, X (en kg) y las alturas (en cm) Y, a un grupo de individuos se han obtenido los siguientes resultados:
+
+\vspace{0.5cm}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+X \textbackslash Y & 160 & 162 & 164 & 166 & 168 & 170 & $n_{i\cdot}$ & $x_in_{i\cdot}$ & $(x_i - \bar{x})^2 n_{i\cdot}$ \\ 
+\hline 
+48 & 3 & 2 & 2 & 1 & 0 & 0 & 8 & 384 & 304.6922 \\ 
+\hline 
+51 & 2 & 3 & 4 & 2 & 2 & 1 & 14 & 714 & 140.8114 \\ 
+\hline 
+54 & 1 & 3 & 6 & 8 & 5 & 1 & 24 & 1296 & 0.7053 \\ 
+\hline 
+57 & 0 & 0 & 1 & 2 & 8 & 3 & 14 & 798 & 112.0114 \\ 
+\hline 
+60 & 0 & 0 & 0 & 2 & 4 & 4 & 10 & 600 & 339.72245 \\ 
+\hline 
+$n_{\cdot j}$ & 6 & 8 & 13 & 15 & 19 & 9 & 70 & 3792 & 897.84275 \\ 
+\hline 
+$y_jn_{\cdot j}$ & 960 & 1296 & 2132 & 2490 & 3192 & 1530 & 11600 &   &   \\ 
+\hline 
+$(y_j - \bar{y})^2 n_{\cdot j}$ & 9600/49 & 5408/49 & 1872/49 & 60/49 & 4864/49 & 8100/49 & 4272/7 &   &   \\ 
+\hline 
+\end{tabular}
+
+\vspace{0.5cm}
+\hspace{0.25cm} a) Calcular el peso medio y la altura media y decir cuál es más representativo.
+
+\begin{equation*}
+\bar{y} = \dfrac{\displaystyle\sum_{j = 1}^6(y_{i}*n_{\cdot j})}{N} = \frac{11600}{70} \simeq 165.7143 \simeq 166 \textrm{ cm}
+\end{equation*}
+
+\begin{equation*}
+\sigma_y^2 = \displaystyle\sum_{j = 1}^6 \dfrac{(y_j - \bar{y})^2 n_{\cdot j}}{N} = \dfrac{2136}{245} \simeq 8.7184 \textrm{ cm}^2
+\end{equation*}
+
+\begin{equation*}
+\sigma_y = \sqrt{\sigma_y^2} = 2.952688156
+\end{equation*}
+
+\begin{equation*}
+C.V.P.(y) = \dfrac{\sigma_y}{\bar{y}} = 0.0178179
+\end{equation*}
+
+\begin{equation*}
+\bar{x} = \dfrac{\displaystyle\sum_{i = 1}^6(x_{i}*n_{\cdot i})}{N} = \frac{3792}{70} \simeq 54.1714 \simeq 54 \textrm{ kg} 
+\end{equation*}
+
+\begin{equation*}
+\sigma_x^2 = \displaystyle\sum_{i = 1}^5 \dfrac{(x_i - \bar{x})^2 n_{i \cdot}}{N} = \dfrac{897.94275}{70} \simeq 12.82775 \textrm{ kg}^2
+\end{equation*}
+
+\begin{equation*}
+\sigma_x = \sqrt{\sigma_x^2} = 3.581585
+\end{equation*}
+
+\begin{equation*}
+C.V.P.(x) = \dfrac{\sigma_x}{\bar{x}} = 0.0661158
+\end{equation*}
+
+\vspace{0.25cm} La media de la altura es más representativa, ya que el coeficiente de variación de Pearson de Y es menor.
+
+\vspace{0.5cm}
+\hspace{0.25cm} b) Calcular el porcentaje de individuos que pesan menos de 55 kg y miden más de 165 cm.
+
+\vspace{0.5cm}
+Tal y como se presentan las variables en la tabla, la altura y el peso son variables discretas, por lo que el número de individuos que pesan menos de 55 kg son los que pesan menos o igual a 54 kg; los que miden más de 165 cm son los que miden más o igual a 166 cm.
+
+\begin{equation*}
+\displaystyle\sum_{i=1}^{3} \displaystyle\sum_{j=4}^{6} \dfrac{n_{ij}}{N} * 100 = \dfrac{1+2+8+2+5+1+1}{70} * 100 = 28.5714 \%
+\end{equation*}
+
+\vspace{0.5cm}
+\hspace{0.25cm} c) Entre los que miden más de 165 cm, ¿cuál es el porcentaje de los que pesan más de 52 kg?
+
+Número de personas que miden más de 165 cm: 70 - 27 = 43
+
+\begin{equation*}
+\displaystyle\sum_{i=3}^{5} \displaystyle\sum_{j=4}^{6} \dfrac{n_{ij}}{43} * 100 = \dfrac{8+5+1+2+8+3+2+4+4}{43} * 100 = 86.0465 \%
+\end{equation*}
+
+\vspace{0.5cm}
+\hspace{0.25cm} d) ¿Cuál es la altura más frecuente entre los individuos cuyo peso oscila entre 51 y 57 kg?
+
+\vspace{0.5cm}
+La altura más frecuente entre los individuos que pesan entre 51 kg y 57 kg es 168 cm.
+
+\vspace{0.5cm}
+\hspace{0.25cm} e) ¿Qué peso medio es más representativo el de los individuos que miden 164 cm o el de los que miden 168 cm?
+
+\vspace{0.5cm}
+\begin{equation*}
+\bar{x}_{y = 164 \textrm{ cm}} = \dfrac{\displaystyle\sum_{i = 1}^5(x_{i}*n_{\cdot i})}{N} = \frac{2*48 + 4*51 + 6*54 + 1*57}{13} = \dfrac{681}{13} \textrm{ kg} = 52.3846 \textrm{ kg} 
+\end{equation*}
+
+\begin{equation*}
+\sigma_{x_{y = 164 \textrm{ cm}}}^2 = \displaystyle\sum_{i = 1}^5 \dfrac{(x_i - \bar{x})^2 n_{i \cdot}}{N} = \dfrac{1080}{169} \simeq 6.3905 \textrm{ kg}^2
+\end{equation*}
+
+\begin{equation*}
+\sigma_{x_{y = 164 \textrm{ cm}}} = \sqrt{\sigma_{x_{y = 164 \textrm{ cm}}}^2} = \dfrac{6 \sqrt{30}}{13}
+\end{equation*}
+
+\begin{equation*}
+C.V.P.(x_{y = 164 \textrm{ cm}}) = \dfrac{\sigma_{x_{y = 164 \textrm{ cm}}}}{\bar{x}_{y = 164 \textrm{ cm}}} = 0.0482575
+\end{equation*}
+
+\begin{equation*}
+\bar{x}_{y = 168 \textrm{ cm}} = \dfrac{\displaystyle\sum_{i = 1}^5(x_{i}*n_{\cdot i})}{N} = \frac{2*51 + 5*54 + 8*57 + 4*60}{19} = \dfrac{1086}{19} \textrm{ kg} = 56.2105 \textrm{ kg} 
+\end{equation*}
+
+\begin{equation*}
+\sigma_{x_{y = 168 \textrm{ cm}}}^2 = \displaystyle\sum_{i = 1}^5 \dfrac{(x_i - \bar{x})^2 n_{i \cdot}}{N} = \dfrac{2682}{361} \simeq 7.4294 \textrm{ kg}^2
+\end{equation*}
+
+\begin{equation*}
+\sigma_{x_{y = 168 \textrm{ cm}}} = \sqrt{\sigma_{x_{y = 168 \textrm{ cm}}}^2} = \dfrac{3 \sqrt{298}}{19}
+\end{equation*}
+
+\begin{equation*}
+C.V.P.(x_{y = 168 \textrm{ cm}}) = \dfrac{\sigma_{x_{y = 168 \textrm{ cm}}}}{\bar{x}_{y = 168 \textrm{ cm}}} = 0.047687
+\end{equation*}
+
+La media más representativa es la de los individuos de 168 cm.
+\newpage
+
 \item En una encuesta de familias sobre el número de individuos que la componen ($X$) y el número de personas activas en ellas ($Y$) se han obtenido los siguientes resultados:
 
 \begin{center}
