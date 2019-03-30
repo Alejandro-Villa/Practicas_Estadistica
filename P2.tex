@@ -2,19 +2,21 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
-\usepackage{textcompw}
+\usepackage{textcomp}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-\author{Alejandro Villanueva Prados}
+\author{Gonzalo Moreno Soto\\ Alejandro Pérez Argüello\\ Miguel Piñar Pérez\\ Gerardo Tirado García\\ Irene Trigueros Lorca\\ Alejandro Villanueva Prados}
 \title{Relación 2 de EDIP.}
 \begin{document}
 \maketitle
 
 \begin{enumerate}
-		\item En una encuesta de familias sobre el número de individuos que la componen ($X$) y el número de personas activas en ellas ($Y$) se han obtenido los siguientes resultados:
+\item
+\item
+\item En una encuesta de familias sobre el número de individuos que la componen ($X$) y el número de personas activas en ellas ($Y$) se han obtenido los siguientes resultados:
 
 \begin{center}
 \begin{tabular}{c|cccc}
@@ -57,6 +59,66 @@ La recta de regresión es $$y = 0,0935x + 0,608.$$
 
 En principio sí, porque se supone que a mayor temperatura habrá mayor evaporación.
 Según el coeficiente de correlación lineal $$r = \frac{\sigma_{xy}}{\sigma_x\sigma_y} = 0,6565$$ el ajuste es más o menos adecuado, pero los hay mejores.
+
+\item Estudiar la dependencia o independencia de las variables en cada una de las siguientes distribuciones. Dar, en cada caso, las curvas de regresión y la covarianza de las dos variables.
+
+\begin{center}
+\begin{tabular}{c|ccccc|c}
+$X \backslash Y$ & 1 & 2 & 3 & 4 & 5 & $n_{i\cdot}$\\\hline
+10 & 2 & 4 & 6 & 10 & 8 & 30\\
+20 & 1 & 2 & 3 & 5 & 4 & 15\\
+30 & 3 & 6 & 9 & 15 & 12 & 45\\
+40 & 4 & 8 & 12 & 20 & 16 & 60\\\hline
+$n_{\cdot j}$ & 10 & 20 & 30 & 50 & 40 & 150\\
+\end{tabular}
+\end{center}
+
+Se aprecia que 
+
+$$n_{ij} = \frac{n_{i\cdot}\cdot n_{\cdot j}}{n} \quad \forall j = 1,2,3,4,5 \quad \forall i = 1,2,3,4$$ 
+
+por lo que son independientes.
+
+Por ser independientes, la covarianza es nula: $$\sigma_{xy} = 0.$$
+
+No tiene sentido en este caso hacer la recta y la curva de regresión. Aunque la recta de regresión sería $$y = 3,6$$ la curva de regresión de $X$ sobre $Y$ sería $$(29, 1), (29, 2), (29, 3), (29, 4), (29, 5)$$ y la curva de regresión de Y sobre X sería $$(10, 3.6), (20, 3.6), (30, 3.6), (40, 3.6), (50,3.6).$$
+
+\bigskip
+
+\begin{center}
+\begin{tabular}{c|ccc|c}
+$X \backslash Y$ & 1 & 2 & 3 & $n_{i\cdot}$\\\hline
+-1 & 0 & 1 & 0 & 1 \\
+0 & 1 & 0 & 1 & 2 \\
+1 & 0 & 1 & 0 & 1 \\\hline
+$n_{\cdot j}$ & 1 & 2 & 1 & 4 \\
+\end{tabular}
+\end{center}
+
+En la segunda fila y en la segunda columna hay dos frecuencias no nulas, por lo que no hay dependencia funcional.
+
+También, se aprecia que $$n_{11} = 0 \not = \frac{n_{1\cdot}\cdot n_{\cdot 1}}{n} = \frac{1}{4},$$ por lo que no son independientes.
+
+$$m_{10} = \bar x = 0$$
+$$m_{01} = \bar y = 2$$
+$$m_{11} = 0$$
+$$\sigma_{xy} = m_{11} - m_{10}m_{01} = 0$$
+
+La covarianza es nula.
+
+Podemos considerar una recta de regresión como $$y = 2.$$
+
+La curva de regresión de $X$ sobre $Y$ es $$(0,1), (0,2), (0,3).$$
+
+La curva de regresión de $Y$ sobre $X$ es $$(-1,2), (0,2), (1,2).$$
+
+\item
+\item
+\item
+\item
+\item
+\item
+
 
         \item De las estadísticas de ``Tiempos de vuelo y consumos de combustible'' de una compañía aérea, se han obtenido datos relativos a 24 trayectos distintos realizados por eel avión DC-9. A partir de estos datos se han obtenido las siguientes medidas:
             \begin{center}
@@ -114,6 +176,10 @@ donde \(\sigma_{ey}^2 = \frac{1}{n}\sum \left( \hat{y}_j-\overline{y}\right)^2=\
 
 \textbf{NOTA: no está terminado el apartado c), no sé cómo hacerlo :'(}
 \end{enumerate}
+
+\item
+\item
+
 
 \end{enumerate}
 
