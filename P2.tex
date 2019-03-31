@@ -489,12 +489,56 @@ Es decir, la función que los relaciona es biyectiva.
 \end{itemize}
 
 \newpage
+
 \item
 \newpage
+
 \item
 \newpage
-\item
+
+\item Calcular el coeficiente de correlación lineal de dos variables cuyas rectas de regresión son:
+
+\[
+\begin{array}{lll}
+x + 4y & = & 1\\
+x + 5y & = & 2\\
+\end{array}
+\]
+
+Consideramos $Y/X$ para la primera recta y $X/Y$ para la segunda.
+
+\[
+\begin{array}{lll}
+y & = & -\frac{x}{4} + \frac{1}{4}\\
+x & = & -5y + 2\\
+\end{array}
+\]
+
+$$a_{Y/X} = \frac{\sigma_{xy}}{\sigma^2_x} = -\frac{1}{4}$$
+
+$$a_{X/Y} = \frac{\sigma_{xy}}{\sigma^2_y} = -5$$
+
+$$a_{Y/X} \cdot a_{X/Y} = \frac{\sigma^2_{xy}}{\sigma^2_y \sigma^2_x} = r^2 = -\frac{1}{4} \cdot (-5) = \frac{5}{4}$$
+
+$r$ es el coeficiente de correlación lineal. Sin embargo, $0 \leq r^2 \leq 1$, por lo que nuestra suposición inicial era incorrecta.
+
+Consideramos ahora $X/Y$ para la primera recta y $Y/X$ para la segunda.
+
+\[
+\begin{array}{lll}
+x & = & -4y + 1\\
+y & = & -\frac{x}{5} + \frac{2}{5}\\
+\end{array}
+\]
+
+Hacemos lo mismo:
+
+$$r^2 = \frac{\sigma^2_{xy}}{\sigma^2_y \sigma^2_x} = a_{Y/X} \cdot a_{X/Y} = -4 \cdot \left( -\frac{1}{5}  \right) = \frac{4}{5}$$
+
+Esta vez el valor de $r^2$ sí tiene sentido.
+\\Por tanto, $$r = -\frac{2}{\sqrt{5}}.$$
 \newpage
+
 \item
 \newpage
 
@@ -558,6 +602,7 @@ donde \(\sigma_{ey}^2 = \frac{1}{n}\sum \left( \hat{y}_j-\overline{y}\right)^2=\
 
 \newpage
 \item
+
 \newpage
 \item Se dispone de la siguiente información referente al gasto en espectáculos (Y, en euros) y la renta disponible (X, cientos de euros) de 6 familias.
 
