@@ -601,7 +601,66 @@ donde \(\sigma_{ey}^2 = \frac{1}{n}\sum \left( \hat{y}_j-\overline{y}\right)^2=\
 \end{enumerate}
 
 \newpage
-\item
+\item La curva de Engel, que expresa el gasto en un determinado bien en función de la renta, adopta en ocasionas la forma de hipérbola equilátera. Ajusta dicha curva a los siguientes datos y cuantifica la bondad:
+
+X = renta (miles de euros) \hspace{0.5cm} Y= gasto (euros)
+
+\vspace{0.25cm}
+\setlength{\parindent}{0pt}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+X \textbackslash Y & 50 & 90 & 160 & 180 & $n_{i \cdot}$ & $x_i n_{i \cdot}$ & $(x_i - \bar{x})^2 n_{i \cdot}$ & $\dfrac{n_{i \cdot}}{x_i} = t_i n_{i \cdot}$ & $t_{i} - \bar{t}$ & $(t_{i} - \bar{t})^2 n_{i \cdot}$ \\ 
+\hline 
+10 & 1 & 0 & 0 & 0 & 1 & 10 & 3025/64 & 0.1 & 0.0325 & 169/160000 \\ 
+\hline 
+12.5 & 0 & 1 & 0 & 0 & 1 & 12.5 & 1225/64 & 0.08 & 0.0125 & 1/6400 \\ 
+\hline 
+20 & 0 & 0 & 1 & 0 & 1 & 20 & 625/64 & 0.05 & -0.0175 & 49/160000 \\ 
+\hline 
+25 & 0 & 0 & 0 & 1 & 1 & 25 & 4225/64 & 0.04 & -0.0275 & 121/160000 \\ 
+\hline 
+$n_{\cdot j}$ & 1 & 1 & 1 & 1 & 4 & 67.5 & 2275/16 & 0.27 &   & 91/40000 \\ 
+\hline 
+$y_{j}n_{\cdot j}$ & 50 & 90 & 160 & 180 & 480 &  &  &   &   &   \\ 
+\hline 
+$y_j - \bar{y}$ & -70 & -30 & 40 & 60 &   &   &   &  &   &   \\ 
+\hline 
+$(y_j - \bar{y})^2 n_{\cdot j}$ & 4900 & 900 & 16000 & 3600 & 11000 &  &   &   &   &   \\ 
+\hline 
+\end{tabular} 
+
+\vspace{0.25cm}
+$\bar{x} = \dfrac{67.5}{4} = 16.875 \textrm{ miles de \euro}$ \hspace{2.5cm} $\bar{y} = \dfrac{480}{4} = 120 \textrm{ \euro}$
+
+\vspace{00.25cm}
+$ y = a + b* \dfrac{1}{x} \Rightarrow (t = \frac{1}{x}) \Rightarrow y = a + bt$
+
+\vspace{0.25cm}
+$\bar{t} = \dfrac{0.27}{4} = 0.0675$ \hspace{2cm} $\sigma_t^2 = \dfrac{91}{40000} * \dfrac{1}{4} = \dfrac{91}{160000}$ \hspace{2cm} $\sigma_{yt} = \dfrac{-5}{4}$
+
+\vspace{0.25cm}
+
+$a = \dfrac{\sigma_{yt}}{\sigma_t^2} = \dfrac{\dfrac{-5}{4}}{\dfrac{91}{160000}} = \dfrac{-200000}{91}$
+
+$b = \bar{y} - a*\bar{x} = 120 + \dfrac{200000}{91} * 0.0675 = \dfrac{24420}{91}$
+
+\vspace{0.25cm}
+$y = \dfrac{-200000}{91} * x + \dfrac{24420}{91}$
+
+\vspace{0.25cm}
+$\sigma_x^2 = \dfrac{2275}{16} * \dfrac{1}{4} = \dfrac{2275}{64}$ \hspace{2.5cm} $\sigma_y^2 = 11000 * \dfrac{1}{4} = 2750$
+
+\vspace{0.25cm}
+$\sigma_{xy} = \dfrac{(-6.875)(-70) + (-4.375)(-30) + 3.125*40 + 8.125*60}{4} = \dfrac{1225}{4} = 306.25$
+
+\vspace{0.25cm}
+$r^2 = \dfrac{\sigma_{xy}^2}{\sigma_{x}^2 \sigma_y^2} = \dfrac{306.25^2}{2750 * 2275/64} = \dfrac{686}{715} \simeq 0.95944055$
+
+\vspace{0.25cm}
+$r = \sqrt{0.9594405} = 0.97951$
+
+\vspace{0.25cm}
+Las variables son directamente dependientes, con una dependencia funcional muy fuerte, ya que $r^2$ es muy cercano a 1.
 
 \newpage
 \item Se dispone de la siguiente información referente al gasto en espectáculos (Y, en euros) y la renta disponible (X, cientos de euros) de 6 familias.
