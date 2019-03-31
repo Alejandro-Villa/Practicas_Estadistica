@@ -494,7 +494,34 @@ Es decir, la función que los relaciona es biyectiva.
 \item
 \newpage
 
-\item
+	\item Se eligen a 50 matrimonios al azar y se les pregunta la edad de ambos al contraer matrimonio.
+	X denota la edad del hombre e Y la de la mujer.
+	
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		x/y	&$[10,20]$	&$]20,25]$	&$]20,30]$	&$]30,35]$	&$]35,40]$	&$n_i$	&$n_i-x_i$	&$x_i-\overline{x}_i$&$(x_i-\overline{x}_i)^2n_{i\cdot}$ \\ \hline
+		$[15,18]$    & 3  & 2     & 3     & 0     & 0   & 8      & 132  & -5,16 & 213.0048 \\
+		$]18,21]$    & 0  & 4     & 2     & 2     & 0   & 8      & 156  & -2,16 & 37.3218  \\
+		$]21,24]$    & 0  & 7     & 10    & 6     & 1   & 24     & 540  & 0.84  & 16.9344  \\
+		$]24,27]$    & 0  & 0     & 2     & 5     & 3   & 10     & 255  & 3.84  & 147.456  \\
+		$n_{·j}$     & 3  & 13    & 17    & 13    & 4   & 50     & 1083 &       & 417.72   \\
+		$y_j-n_{·j}$ & 45 & 292.5 & 467.5 & 422.5 & 150 & 1377.5 &&&\\
+		$y_j-\overline{y}$ 
+		         & -12.55 & -5.05 & -0.05 & 4.95  & 9.95 &&&&\\
+		$y_j-\overline{y}^2n_{\cdot j}$
+		         & 472.5075 & 331.5325 & 0.0425 & 318.5325 & 396.01 & 1318.625&&&\\
+		\hline
+	\end{tabular}
+	$$
+	\overline{x}=\frac{1083}{50}=21.66 \qquad 
+	\overline{y}=\frac{1377.5}{50}=27.55 \qquad
+	\sigma_{x}^2=\frac{414.72}{50}=8.2944 \qquad
+	\sigma_{y}^2=\frac{1518.625}{50}=30.3725
+	$$ 
+	$$
+	\sigma_xy=\frac{482.1}{50}=9.642 \qquad
+	r^2=\frac{\sigma_xy^2}{\sigma_x^2\sigma_y^2}=0.36904
+	$$
 \newpage
 
 \item Calcular el coeficiente de correlación lineal de dos variables cuyas rectas de regresión son:
