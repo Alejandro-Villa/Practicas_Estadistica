@@ -1,0 +1,75 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\begin{document}
+
+\section*{Ejercicio 7}
+
+Para cada una de las distribuciones:
+
+\begin{center}
+\begin{tabular}{c|ccc|c}
+\multicolumn{5}{c}{Distribución A}\\
+$X \backslash Y$ & 10 & 15 & 20 & $n_{i\cdot}$\\\hline
+1 & 0 & 2 & 0 & 2 \\
+2 & 1 & 0 & 0 & 1 \\
+3 & 0 & 0 & 3 & 3 \\
+4 & 0 & 1 & 0 & 1\\\hline
+$n_{\cdot j}$ & 1 & 3 & 3 & 7\\
+\end{tabular}
+\begin{tabular}{c|ccc|c}
+\multicolumn{5}{c}{Distribución B}\\
+$X \backslash Y$ & 10 & 15 & 20 & $n_{i\cdot}$\\\hline
+1 & 0 & 2 & 0 & 2 \\
+2 & 1 & 0 & 0 & 1 \\
+3 & 0 & 0 & 3 & 3 \\\hline
+$n_{\cdot j}$ & 1 & 2 & 3 & 6\\
+
+\end{tabular}
+\begin{tabular}{c|cccc|c}
+\multicolumn{5}{c}{Distribución C}\\
+$X \backslash Y$ & 10 & 15 & 20 & 25 & $n_{i\cdot}$\\\hline
+1 & 0 & 3 & 0 & 1 & 4 \\
+2 & 0 & 0 & 1 & 0 & 1 \\
+3 & 2 & 0 & 0 & 0 & 2 \\\hline
+$n_{\cdot j}$ & 2 & 3 & 1 & 1 & 7 \\
+
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+
+\item[a)]¿Dependen funcionalmente $X$ de $Y$ o $Y$ de $X$?
+
+\begin{itemize}
+
+\item[Distribución A:]$Y$ depende funcionalmente de $X$ porque para todo $x_i$ existe un único $y_j$.
+\\No ocurre lo contrario, ya que para $y_2 = 15$ exiten $x_1 = 1$ y $x_4 = 4$ con frecuencias $n_{ij}$ no nulas.
+
+\item[Distribución B:]$X$ e $Y$ tienen una dependencia funcional recíproca, ya que para todo $x_i$ existe un único $y_j$ y viceversa.
+Es decir, la función que los relaciona es biyectiva.
+
+\item[Distribución C:]$X$ depende funcionalmente de $Y$ porque para todo $y_j$ existe un único $x_i$.
+\\No ocurre lo contrario, ya que para $x_1 = 1$ exiten $y_2 = 15$ y $y_4 = 25$ con frecuencias $n_{ij}$ no nulas.
+
+\end{itemize}
+
+\item[b)]Calcular las curvas de regresión y comentar los resultados.
+
+\begin{itemize}
+
+\item[Distribución A:]La curva de regresión $Y/X$ es $$(1, 15), (2, 10), (3, 20), (4, 15).$$
+\\Estos puntos forman parte de la función que relaciona ambas variables, $f(X) = Y$.
+\\La curva de regresión $X/Y$ es $$(2, 10), (2, 15), (3, 20).$$
+
+\item[Distribución B:]La curva de regresión de $Y/X$ es $$(1,15), (2,10), (3,20).$$
+\\La curva de regresión de $X/Y$ es $$(2,10), (1,15), (3,20).$$
+\\Estas dos curvas son en realidad la misma, y forman parte de la función que asocia las variables, $g(X) = Y$ y $g^{-1}(Y) = X$.
+
+\item[Distribución C:]La curva de regresión de $Y/X$ es $$(1, 17'5), (2, 20), (3, 10).$$
+\\La curva de regresión de $X/Y$ es $$(3, 10), (1, 15), (2, 20), (1, 25).$$
+\\Estos puntos forman parte de la función que relaciona ambas variables, $h(Y) = X$.
+
+\end{itemize}
+
+\end{itemize}
+\end{document}
