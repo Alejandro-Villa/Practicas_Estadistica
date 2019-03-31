@@ -559,7 +559,175 @@ donde \(\sigma_{ey}^2 = \frac{1}{n}\sum \left( \hat{y}_j-\overline{y}\right)^2=\
 \newpage
 \item
 \newpage
-\item
+\item Se dispone de la siguiente información referente al gasto en espectáculos (Y, en euros) y la renta disponible (X, cientos de euros) de 6 familias.
+
+\vspace{.25cm}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+Y & 30 & 50 & 70 & 80 & 120 & 140 \\ 
+\hline 
+X & 9 & 10 & 12 & 15 & 22 & 32 \\ 
+\hline 
+\end{tabular} 
+
+\vspace{0.25cm}
+Explica el comportamiento de Y por X mediante:
+
+\hspace{0.5cm} a) Relación lineal: $y = ax + b \longleftrightarrow $ Recta de regresión de Y sobre X $\rightarrow y = \bar{y} + \dfrac{\sigma_{xy}}{\sigma_{x}^2} (x - \bar{x})$
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+$x_i$ & $y_i$ & $(x_i - \bar{x})^2$ & $(y_i - \bar{y})^2$ \\ 
+\hline 
+9 & 30 & 529/9 & 24025/9 \\ 
+\hline 
+10 & 50 & 400/9 & 9025/9 \\ 
+\hline 
+12 & 70 & 196/9 & 1225/9 \\ 
+\hline 
+15 & 80 & 25/9 & 25/9 \\ 
+\hline 
+22 & 120 & 256/9 & 13225/9 \\ 
+\hline 
+32 & 140 & 2116/9 & 30625/9 \\ 
+\hline 
+100 & 490 & 1174/3 & 26050/3 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\vspace{0.25cm}
+$\bar{x} = \dfrac{50}{3}$	\hspace{2cm} $\bar{y} = \dfrac{490}{6} = \dfrac{245}{3}$ \hspace{2cm} $\sigma_x^2 = \dfrac{587}{9}$ \hspace{2cm}  $\sigma_{xy} = \dfrac{2645}{9}$
+
+\vspace{0.25cm}
+$a = \dfrac{\sigma_{xy}}{\sigma_{x}^2} = \dfrac{2645}{9} * \dfrac{9}{587} = \dfrac{2645}{587}$ \hspace{2 cm} $b = \bar{y} - a \bar{x} = \dfrac{245}{5} - \dfrac{2645}{587} * \dfrac{50}{3} = \dfrac{3855}{587}$
+
+\vspace{0.25cm}
+\begin{center}
+$y = \dfrac{2645}{587} x + \dfrac{3855}{587}$ \\  
+\end{center}
+
+\vspace{0.25cm} 
+$r^2 = \dfrac{\sigma_{xy}^2}{\sigma_x^2 \sigma_y^2} = 0.915030393 $
+
+\vspace{0.5cm} 
+\hspace{0.25cm} b)Hipérbola equilátera: $y = \dfrac{a}{x} +b \longleftrightarrow$ Recta de Regresión de Y sobre $X' = 1/X \rightarrow Y = \bar{y} + \dfrac{\sigma_{x'y}}{\sigma_{x'}^2} * (x' - \bar{x'})$
+
+\vspace{0.25cm}
+\begin{tabular}{|c|c|c|}
+\hline 
+$x'_i = 1/x_i$ & $x'_i - \bar{x}'$ & $(x'_i - \bar{x}')^2$ \\ 
+\hline 
+1/9 & 725/19008 & 0.00145479957 \\ 
+\hline 
+1/10 & 2569/95040 & 0.00073066003 \\ 
+\hline 
+1/12 & 197/19008 & 0.00010741368 \\ 
+\hline 
+1/15 & -599/95040 & 0.00003972288 \\ 
+\hline 
+1/22 & -523/19008 & 0.0007570604 \\ 
+\hline 
+1/32 & -793/19008 & 0.00174049799 \\ 
+\hline 
+1387/3168 &   & 0.00483015458 \\ 
+\hline 
+\end{tabular} 
+
+\vspace{0.25cm}
+$\bar{x'} = \dfrac{1387}{19008}$ \hspace{2cm} $\sigma_{x'}^2 = 00483015458/6 = 0.00080502576$ \hspace{2cm} $\sigma_{x'y} = -1.07265$
+
+\vspace{0.25cm}
+$a = \dfrac{\sigma_{x'y}}{\sigma_{x'}^2} = -1332.441828$ \hspace{2cm} $b = \bar{y} - a \bar{x'} = 178.89398$
+
+\begin{center}
+$y = \dfrac{-1332.441828}{x} + 178.89398$
+\end{center}
+
+\vspace{0.25cm}
+$\eta_{Y / X}^2 = 1 - \dfrac{\sigma_{ry}^2}{\sigma_y^2} = 1 - \dfrac{22.64211657353822}{\dfrac{13025}{9}} = 0.9843547754962116$
+
+\vspace{0.5cm}
+\hspace{0.25cm} c) Curva potencial: $y = ax^b$ \hspace{2pt} $[ln(y) = ln(a) + b*ln(x)] \rightarrow$ Recta de regresión de $Y' = ln Y$ sobre $X' = ln X$
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+$x'_i = ln x_i$ & $y'_i = ln y_i$ & $x'_i - \bar{x}'$ & $y'_i - \bar{y}'$ \\ 
+\hline 
+2.197224577 & 3.40120 & -0.5110329027 & -0.877615285 \\ 
+\hline 
+2.302585093 & 3.91202 & -0.405672387 & -0.3667896612 \\ 
+\hline 
+2.48490665 & 4.24850 & -0.2233508302 & -0.03031742462 \\ 
+\hline 
+2.708050201 & 4.38203 & -0.00020727889 & 0.103213968 \\ 
+\hline 
+3.091042453 & 4.78749 & 0.3827849734 & 0.5086790761 \\ 
+\hline 
+3.465735903 & 4.94164 & 0.7574784228 & 0.6628297559 \\ 
+\hline 
+16.24954488 & 25.67288 &   &   \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+$\bar{x'} = \dfrac{16.2495}{6} \simeq 2.70825748$ \hspace{1.5cm} $\bar{y'} = \dfrac{25.672876}{6} \simeq 4.278813$
+
+\vspace{0.25cm}
+$\sigma_{x'}^2 = \dfrac{1.19591}{6} = 0.199318$ \hspace{1.5cm} $\sigma_{y'}^2 = 2020.11011$ \hspace{1.5cm} $\sigma_{x'y'} = \dfrac{1.300831}{6} = 0.216805$
+
+\vspace{0.25cm}
+$b = \dfrac{\sigma_{x'y'}}{\sigma_{x}^2} = 1.087735$ \hspace{1.5cm} $a' = \bar{y'} - b \bar{x'} = 1.33295$ \hspace{1.5cm} $a = e^{a'} = 3.792202$
+
+\begin{center}
+$y' = 1.087735 x' +1.33295 \Rightarrow y = 3.79202*x^{1.087735}$
+\end{center}
+
+\vspace{0.25cm}
+$\eta_{Y / X}^2 = 1 - \dfrac{\sigma_{ry}^2}{\sigma_y^2} = 0.9096720365059485$
+
+\vspace{0.5cm}
+\hspace{0.25cm} d) Curva exponencial: $y = ab^x [ln y = ln a + x*ln(b)] \rightarrow Y' = ln Y$ sobre X.
+
+\vspace{0.25cm}
+Los valores que se utilizan para este apartado han sido tomados de las tablas y medidas calculadas en apartados anteriores.
+
+\vspace{0.25cm}
+$\bar{x} = \dfrac{50}{3}$ \hspace{1cm} $\bar{y'} = 4.278813$ \hspace{1cm} $\sigma_{x}^2 = \dfrac{587}{9}$ \hspace{1cm} $\sigma_{y'}^2 = 2020.11011$ \hspace{1cm} $\sigma_{xy'} = 3.669908493$
+
+\vspace{0.25cm}
+$b' = \dfrac{\sigma_{xy'}}{\sigma_{x}^2} = 0.05626776224 \Rightarrow b = e^{b'} = 1.057880906$
+
+\vspace{0.25cm}
+$a' = \bar{y'} - b * \bar{x} = 3.341016963 \Rightarrow a = e^{a'} = 28.2478391$
+
+\begin{center}
+$y' = 0.05626773224x + 3.341016963 \Rightarrow y = 28.2478391*1.057880906^x$
+\end{center} 
+
+\vspace{0.25cm}
+$\eta_{Y / X}^2 = 1 - \dfrac{\sigma_{ry}^2}{\sigma_y^2} = 0.8209233026406275$
+
+
+\vspace{0.5cm}
+\hspace{0.25cm} ¿Qué ajuste es más adecuado?
+
+\vspace{0.25cm}
+Basándonos en los resultados obtenidos al calcular los coeficientes de correlación ($\eta_{Y/X}^2$) de cada uno de los apartados, podemos afirmar que el mejor ajuste es el de la hipérbola equilátera, seguido de la recta y de la curva potencial, concluyendo que la peor es la curva exponencial.
+
+Esto es debido a que los ajustes son más adecuados cuanto más cercano al 1 estén los valores de sus coeficientes de correlación, ya que, por la fórmula:
+
+\begin{equation*}
+\eta_{Y / X}^2 = 1 - \dfrac{\sigma_{ry}^2}{\sigma_y^2}
+\end{equation*}
+
+Se aprecia que si $\eta_{Y/X}^2$ es próximo a 1, la varianza residual será prácticamente 0, lo que implicaría que la varianza explicada por la regresión (nos indica en qué medida queda explicada la variable dependiente mediante el modelo estimado) es cercano a 1 (que es el máximo valor que puede tomar). 
+
+\end{document}
 
 
 \end{enumerate}
